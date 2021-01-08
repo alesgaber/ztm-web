@@ -7,14 +7,16 @@ var button = document.getElementById('button')
 function initColors () {
   color1.value = '#ff0000'
   color2.value = '#ffff00'
+
   setGradient();
+  setTextContent();
 }
 
 function setGradient () {
   body.style.background =
     'linear-gradient(to right, ' + color1.value + ', ' + color2.value + ')'
 
-  setTextContent()
+  setTextContent();
 }
 
 function setTextContent () {
@@ -38,10 +40,9 @@ function setRandomGradient () {
 	setGradient ();
 }
 
-color1.addEventListener('input', setGradient)
-color2.addEventListener('input', setGradient)
-button.addEventListener('click', setRandomGradient)
+color1.addEventListener('input', setGradient);
+color2.addEventListener('input', setGradient);
+button.addEventListener('click', setRandomGradient);
 
 // init
-initColors()
-setTextContent()
+initColors();
